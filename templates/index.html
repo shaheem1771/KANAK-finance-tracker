@@ -7,25 +7,36 @@
     <link rel="stylesheet" href="/static/style.css">
   </head>
   <body>
-    <main>
-      <h1>Expenses</h1>
-      {% if expenses %}
-      <table>
-        <thead><tr><th>Date</th><th>Category</th><th>Amount</th><th>Note</th></tr></thead>
-        <tbody>
-        {% for e in expenses %}
-          <tr>
-            <td>{{ e.get('date','') }}</td>
-            <td>{{ e.get('category','') }}</td>
-            <td>{{ e.get('amount','') }}</td>
-            <td>{{ e.get('note','') }}</td>
-          </tr>
-        {% endfor %}
-        </tbody>
-      </table>
-      {% else %}
-      <p>No expenses yet.</p>
-      {% endif %}
+    <main class="container">
+      <header>
+        <h1>Personal Finance Tracker</h1>
+      </header>
+
+      <section class="summary">
+        <strong>Total:</strong> ${{ '%.2f' % (total or 0) }}
+      </section>
+
+      <section>
+        {% if expenses %}
+        <table class="expenses">
+          <thead>
+            <tr><th>Date</th><th>Category</th><th class="amount">Amount</th><th>Note</th></tr>
+          </thead>
+          <tbody>
+            {% for e in expenses %}
+            <tr>
+              <td>{{ e.date }}</td>
+              <td>{{ e.category }}</td>
+              <td class="amount">${{ '%.2f' % e.amount }}</td>
+              <td>{{ e.note }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        {% else %}
+        <p class="muted">No expenses yet — add rows to `expenses.csv`.</p>
+        {% endif %}
+      </section>
     </main>
     <script src="/static/script.js"></script>
   </body>

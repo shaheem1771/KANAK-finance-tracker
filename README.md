@@ -1,10 +1,20 @@
-# Personal Finance Tracker (recreated)
+# Personal Finance Tracker
 
-This is a minimal restoration scaffold for the Personal-finance-tracker project. It provides a tiny Flask app that reads `expenses.csv` and renders a simple HTML page.
+This repository is a minimal, efficient personal finance tracker web app.
 
-Run locally:
+Quick start
 
 ```bash
+python -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 python app.py
 ```
+
+Features:
+- Lightweight Flask app with an `/api/expenses` JSON endpoint
+- Simple CSV-backed data (`expenses.csv`)
+- Small, responsive UI in `templates/index.html`
+
+To customize the CSV path, set the `EXPENSES_CSV` environment variable before running.
+

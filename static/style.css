@@ -1,4 +1,13 @@
-body { font-family: system-ui, Arial, sans-serif; padding: 2rem; }
-table { border-collapse: collapse; width: 100%; }
-th, td { border: 1px solid #ddd; padding: 8px; }
-th { background: #f4f4f4; text-align: left; }
+
+:root{--bg:#ffffff;--muted:#666;--accent:#2b6cb0;--border:#e6e6e6}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;background:var(--bg);color:#111;padding:24px}
+.container{max-width:900px;margin:0 auto}
+header h1{margin:0 0 12px 0;font-size:1.5rem}
+.summary{margin-bottom:12px}
+.muted{color:var(--muted)}
+table.expenses{width:100%;border-collapse:collapse;border:1px solid var(--border)}
+table.expenses th,table.expenses td{padding:10px;border-bottom:1px solid var(--border)}
+table.expenses th{background:#fafafa;text-align:left}
+.amount{text-align:right;font-feature-settings:"tnum" 1}
+
