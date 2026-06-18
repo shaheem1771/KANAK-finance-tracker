@@ -12,32 +12,55 @@
         <h1>Personal Finance Tracker</h1>
       </header>
 
-      <section class="summary">
-        <strong>Total:</strong> ${{ '%.2f' % (total or 0) }}
-      </section>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">Add Expense</h5>
+              <form id="expenseForm">
+                <div class="mb-2"><label class="form-label">Date</label><input name="date" type="date" class="form-control" required></div>
+                <div class="mb-2"><label class="form-label">Category</label><input name="category" class="form-control" placeholder="groceries" required></div>
+                <div class="mb-2"><label class="form-label">Amount</label><input name="amount" type="number" step="0.01" class="form-control" placeholder="0.00" required></div>
+                <div class="mb-2"><label class="form-label">Note</label><input name="note" class="form-control" placeholder="optional"></div>
+                <button class="btn btn-primary mt-2" type="submit">Add</button>
+              </form>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h6>Summary</h6>
+              <p><strong>Total:</strong> $<span id="total">{{ '%.2f' % (total or 0) }}</span></p>
+            </div>
+          </div>
+        </div>
 
-      <section>
-        {% if expenses %}
-        <table class="expenses">
-          <thead>
-            <tr><th>Date</th><th>Category</th><th class="amount">Amount</th><th>Note</th></tr>
-          </thead>
-          <tbody>
-            {% for e in expenses %}
-            <tr>
-              <td>{{ e.date }}</td>
-              <td>{{ e.category }}</td>
-              <td class="amount">${{ '%.2f' % e.amount }}</td>
-              <td>{{ e.note }}</td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
-        {% else %}
-        <p class="muted">No expenses yet — add rows to `expenses.csv`.</p>
-        {% endif %}
-      </section>
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Expenses</h5>
+              <div class="table-responsive">
+                <table class="table table-sm" id="expensesTable">
+                  <thead>
+                    <tr><th>Date</th><th>Category</th><th class="text-end">Amount</th><th>Note</th></tr>
+                  </thead>
+                  <tbody>
+                    {% for e in expenses %}
+                    <tr>
+                      <td>{{ e.date }}</td>
+                      <td>{{ e.category }}</td>
+                      <td class="text-end">${{ '%.2f' % e.amount }}</td>
+                      <td>{{ e.note }}</td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="" crossorigin="anonymous"></script>
     <script src="/static/script.js"></script>
   </body>
 </html>
