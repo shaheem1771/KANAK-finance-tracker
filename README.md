@@ -1,27 +1,31 @@
-# Personal Finance Tracker
+# KANANK (കണക്ക്)
 
-This repository is a minimal, efficient personal finance tracker web app.
+Track every rupee, master your money.
 
-Quick start
+KANANK is a premium full-stack personal finance management app built with a modern fintech-inspired UI and a scalable backend.
+
+## Tech Stack
+
+- Frontend: React, TypeScript, TailwindCSS, Framer Motion, Recharts, Lucide React, React Hot Toast, Zustand
+- Backend: Node.js, Express.js
+- Database: MongoDB, Mongoose
+- Auth: JWT Authentication
+
+## Structure
+
+- `src/` — frontend
+- `server/` — backend
+
+## Run
 
 ```bash
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-python app.py
+npm install
+npm run dev
 ```
 
-Features:
-- Lightweight Flask app with an `/api/expenses` JSON endpoint
-- Simple CSV-backed data (`expenses.csv`)
-- Small, responsive UI in `templates/index.html`
+## Notes
 
-Interactive usage:
-- The web UI includes an "Add Expense" form to append new rows to `expenses.csv`.
-- The API endpoint `POST /api/expenses` accepts JSON `{date,category,amount,note}` and returns the saved row.
-
-Notes:
-- This app uses a simple CSV backend and is intended for small personal datasets. For production use, migrate to a proper database.
-
-To customize the CSV path, set the `EXPENSES_CSV` environment variable before running.
+- Frontend uses Vite and Tailwind.
+- Backend uses Express and MongoDB.
+- Add a `.env` file in `server/` for `MONGODB_URI` and `JWT_SECRET`.
 

@@ -94,14 +94,6 @@ def load_expenses(path: str = 'expenses.csv') -> List[Dict]:
             })
 
     return rows
-
-
-if __name__ == '__main__':
-    # run with: python app.py
-    app = create_app()
-    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)), debug=os.environ.get('FLASK_DEBUG', '1') == '1')
-
-
 def append_expense(path: Path, row: Dict[str, str]) -> None:
     """Append a row to CSV safely using a lock.
 
@@ -117,3 +109,9 @@ def append_expense(path: Path, row: Dict[str, str]) -> None:
             if not file_exists:
                 writer.writeheader()
             writer.writerow(row)
+
+
+if __name__ == '__main__':
+    # run with: python app.py
+    app = create_app()
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)), debug=os.environ.get('FLASK_DEBUG', '1') == '1')
