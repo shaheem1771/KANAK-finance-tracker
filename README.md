@@ -36,28 +36,19 @@ https://github.com/user-attachments/assets/f24df56a-fa5d-431e-b5fc-849d416c1d49.
 <table>
 <tr>
 <td align="center">
-<img src="templates/IMG_3095.jpeg" width="450">
-
-**Dashboard**
-
+<img src="templates/IMG_3095.jpeg" width="550"><br><br>
+<b>Dashboard</b>
 </td>
 
 <td align="center">
-<img src="templates/IMG_3096.jpeg" width="450">
-
-**Analytics**
-
-
+<img src="templates/IMG_3096.jpeg" width="550"><br><br>
+<b>Analytics</b>
 </td>
 
 <td align="center">
-<img src="templates/IMG_3097.jpeg" width="450">
-
-**Transactions**
-
-
+<img src="templates/IMG_3097.jpeg" width="550"><br><br>
+<b>Transactions</b>
 </td>
-
 </tr>
 </table>
 
