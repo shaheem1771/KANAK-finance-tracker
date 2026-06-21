@@ -31,27 +31,19 @@ KANAK focuses on delivering a clean user experience with interactive charts, tra
 
 https://github.com/user-attachments/assets/f24df56a-fa5d-431e-b5fc-849d416c1d49.mov
 
-## Screenshots
+## 📸 Screenshots
 
-<table>
-<tr>
-<td align="center">
-<img src="templates/IMG_3095.jpeg" width="550"><br><br>
-<b>Dashboard</b>
-</td>
+<p>
+  <img src="templates/IMG_3095.jpeg" width="500" alt="Dashboard">
+  <img src="templates/IMG_3096.jpeg" width="500" alt="Analytics">
+  <img src="templates/IMG_3097.jpeg" width="500" alt="Transactions">
+</p>
 
-<td align="center">
-<img src="templates/IMG_3096.jpeg" width="550"><br><br>
-<b>Analytics</b>
-</td>
-
-<td align="center">
-<img src="templates/IMG_3097.jpeg" width="550"><br><br>
-<b>Transactions</b>
-</td>
-</tr>
-</table>
-
+<p>
+  <b>Dashboard</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <b>Analytics</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <b>Transactions</b>
+</p>
 ---
 
 ## Tech Stack
